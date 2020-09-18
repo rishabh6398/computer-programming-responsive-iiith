@@ -3,6 +3,14 @@
 <head>
 <link rel = 'stylesheet' type = 'text/css' href = 'advControlFlow.css' />
 <link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
+	<script>
+		function range()
+		{
+			var i=document.getElementById("simpleLoopInput").value;
+			if(i<0 && i>20)
+				alert("The given number is not in range.")
+		}
+	</script>
 <script src = 'advControlFlow.js' ></script>
 <title>Computer-Programming</title>
 </head>
@@ -24,7 +32,7 @@
             </select>
         	<div class = 'instructionText' >Enter number for calculating P!</div>
 			<input  class = 'inputField marginBottom' type = 'text'   id = "simpleLoopInput">
-			<button class = 'button startButton' id = "btnStart" >Start</button>
+			<button class = 'button startButton' id = "btnStart" onclick="range()">Start</button>
 			<button class = 'buttonDisable nextButton' id = "btnNext" disabled>Next</button>
 			<button class = 'button switchButton marginTop' id = "btnNestedLoop" >Switch to Nested Loop</button>
 		</div><!-- end of arraySizeInputBlock -->
