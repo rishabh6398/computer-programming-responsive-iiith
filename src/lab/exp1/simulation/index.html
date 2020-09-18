@@ -11,6 +11,17 @@
 <link rel = 'stylesheet' type = 'text/css' href = 'numericalApproximation.css' />
 <link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
 <script src = "numericalApproximation.js"></script>
+	<script>
+		function range()
+		{
+		var a=document.getElementById("ValueA").value;
+		var b=document.getElementById("ValueB").value;
+		if(a<1 || a>10 || b<1 || b>10){
+		alert("The given numbers are not in range.")
+		}
+		}
+		
+	</script>
 <title>Computer-Programming</title>
 </head>
 
@@ -33,7 +44,7 @@
 			<div class = 'variableText' >Initialize variables</div>
 			<input  placeholder = 'Value of a' class = 'inputField' type = 'text'   id = 'valueA' size = '10' >
 			<input  placeholder = 'Value of b' class = 'inputField' type = 'text'   id = 'valueB' size = '10' >
-			<button  class = 'button startButton' id = 'okBtnId' >OK</button>
+			<button  class = 'button startButton' id = 'okBtnId' onclick="range();">OK</button>
 			<button class = 'buttonDisable myStartButton' id = 'startBtnId' disabled>Start</button><button class = 'buttonDisable myStartButton hide' id = 'stopBtnId' disabled>Stop</button>
 			<button class = 'buttonDisable nextButton' id = 'nextBtnId' disabled>Next</button>
 		</div><!-- end of inputDivisionSimpleLoop -->
